@@ -1,0 +1,24 @@
+<div class='sectionTitleArea'>
+    <h4 class='sectionTitle'>{{sectionId}}</h4>
+    <button class='addStickyButton' title='Add Sticky' (click)="hidewWriteNote=false;">+</button>
+</div>
+<div *ngFor="let card of cards;">
+    <ng-container *ngIf="card.text">
+        <app-card [card]="card"></app-card>
+    </ng-container>
+</div>
+
+<div class='addStickyForm' [hidden]="hidewWriteNote" id='stickyForm1'>
+    <textarea autofocus #box class='stickyForm' cols='30' (keyup.enter)="onEnter(box)" maxlength='140' rows='4'></textarea>
+</div>
+<!--
+    
+    <ng-container *ngIf="isTypeValid(card.type,0)">
+        <app-card [card]="card"></app-card>
+    </ng-container>
+    
+<div >
+    <app-card id="someIdwfas" text="text whciahci" [card]="card1"></app-card>
+</div>
+[innerHTML]="notes"
+-->

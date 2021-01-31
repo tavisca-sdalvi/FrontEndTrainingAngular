@@ -1,0 +1,9 @@
+<div class="points" id='points1'>
+    <div class="sticky">
+    <div class="stickyText" id='{{ card.id}}' (click)="editNote()">{{ card.text}}</div>
+    <div class="voteCount">
+        <span class="count" style="float: left;">+ {{ card.voteCount}}</span>
+        <button style="float: right;" (click)="card.addVote()">Like</button>
+    </div>
+    </div>
+</div>
